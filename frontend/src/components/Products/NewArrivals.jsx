@@ -131,12 +131,7 @@ const NewArrivals = () => {
       setCanScrollLeft(leftScroll > 0);
       setCanScrollRight(leftScroll < maxScrollLeft - 2);
     }
-    console.log({
-      scrollLeft: container.scrollLeft,
-      clientWidth: container.scrollWidth,
-      containerScrollWidth: container.scrollWidth,
-      //   offsetLeftscrollRef.current.offsetLeft
-    });
+   
   };
 
   useEffect(() => {
@@ -147,7 +142,7 @@ const NewArrivals = () => {
       return () =>
         container.removeEventListener("scroll", updateScrollButtons());
     }
-  },[]);
+  }, []);
   return (
     <section className="py-16 px-4 lg:px-0">
       <div className="container mx-auto text-center mb-10 relative">

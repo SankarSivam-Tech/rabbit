@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const GenderCollection = () => {
   return (
-    <section className="py-16 px-4 lg:px-0">
+    <section className="py-16 px-4 lg:px-6">
       <div className="container mx-auto flex flex-col md:flex-row gap-8">
         {/* Womens Collection */}
         <div className="relative flex-1">

@@ -10,8 +10,8 @@ import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
-  const [drawerOpen, setDrawerOpen] = useState(true);
-  const [navDrawerOpen, setNavDrawerOpen] = useState(true);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [navDrawerOpen, setNavDrawerOpen] = useState(false);
 
   const toggleCartDrawer = () => {
     setDrawerOpen(!drawerOpen);

@@ -33,13 +33,12 @@ const AdminLayout = () => {
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 md:translate-x-0 md:static md:block z-20`}
       >
-        {/* Sidebar */}
         <AdminSidebar />
       </div>
 
       {/* Main Content */}
       <div className="flex-grow p-6 overflow-auto">
-        <Outlet/>
+        <Outlet />
       </div>
     </div>
   );

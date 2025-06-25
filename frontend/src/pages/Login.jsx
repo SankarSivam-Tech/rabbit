@@ -1,14 +1,18 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import login from "../assets/login.webp";
+import { loginUser } from "../redux/slices/authSlice";
+import { useDispatch } from "react-redux";
 
 function Login() {
   const [formData, setFormData] = useState({});
+  const dispatch = useDispatch();
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(loginUser(formData ));
     console.log("user login:", formData);
   };
   return (

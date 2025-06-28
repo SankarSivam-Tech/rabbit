@@ -1,21 +1,27 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import register from "../assets/register.webp";
+import { registerUser } from "../redux/slices/authSlice";
+import { useDispatch } from "react-redux";
 
 function Register() {
   const [formData, setFormData] = useState({});
+  const dispatch = useDispatch();
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
-  const handleSubmit=(e)=>{
-    e.preventDefault()
-    console.log("user registered:",formData);
-    
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(registerUser(formData));
+    console.log("user registered:", formData);
+  };
   return (
     <div className="flex">
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center p-8 md:p-12">
-        <form onSubmit={handleSubmit} className="w-full max-w-md bg-white p-8 rounded-lg border shadow-sm">
+        <form
+          onSubmit={handleSubmit}
+          className="w-full max-w-md bg-white p-8 rounded-lg border shadow-sm"
+        >
           <div className="flex justify-center mb-6">
             <h2 className="text-xl font-medium">Rabbit</h2>
           </div>

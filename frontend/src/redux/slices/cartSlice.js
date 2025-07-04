@@ -1,4 +1,4 @@
-import { creatSlice, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 // Helper function to load cart from local storage
@@ -204,5 +204,5 @@ const cartSlice = createSlice({
       });
   },
 });
-export const { clearCart } = createSlice.actions;
+export const { clearCart } = cartSlice.actions;
 export default cartSlice.reducer;
